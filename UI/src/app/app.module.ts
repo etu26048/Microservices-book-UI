@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {MultiplicationserviceService} from './Services/multiplicationservice.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import { MultplicationpanelComponent } from './multplicationpanel/multplicationpanel.component';
-import { LeaderboardpanelComponent } from './leaderboardpanel/leaderboardpanel.component';
-import { SelfrankingComponent } from './selfranking/selfranking.component';
+import {AppComponent} from './app.component';
+import {MultplicationpanelComponent} from './Components/multplicationpanel/multplicationpanel.component';
+import {LeaderboardpanelComponent} from './Components/leaderboardpanel/leaderboardpanel.component';
+import {SelfrankingComponent} from './Components/selfranking/selfranking.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -13,12 +15,14 @@ import { SelfrankingComponent } from './selfranking/selfranking.component';
     AppComponent,
     MultplicationpanelComponent,
     LeaderboardpanelComponent,
-    SelfrankingComponent
+    SelfrankingComponent,
+    MultiplicationserviceService
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
