@@ -1,4 +1,4 @@
-import {MultiplicationserviceService} from './Services/multiplicationservice.service';
+import {MultiplicationService} from './Services/multiplication.service';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
@@ -15,14 +15,13 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     MultplicationpanelComponent,
     LeaderboardpanelComponent,
-    SelfrankingComponent,
-    MultiplicationserviceService
+    SelfrankingComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MultiplicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

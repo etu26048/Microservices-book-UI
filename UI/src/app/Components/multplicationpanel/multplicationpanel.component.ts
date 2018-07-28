@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Multiplication} from '../../Model/multiplication';
 import {MultiplicationResultAttempt} from '../../Model/multiplicationResultAttempt';
-import {MultiplicationserviceService} from '../../Services/multiplicationservice.service';
-import { Observable } from 'rxjs';
+import {MultiplicationService} from '../../Services/multiplication.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-multplicationpanel',
@@ -15,14 +15,14 @@ export class MultplicationpanelComponent implements OnInit {
 
   multiplicationResultAttempt = new MultiplicationResultAttempt();
 
-  constructor(private service: MultiplicationserviceService) {}
+  constructor(private service: MultiplicationService) {}
 
   ngOnInit() {
-    
+    this.getMultiplication();
   }
 
-  public getMultiplication (): Observable<Multiplication> {
-    return this.service.getMultiplication();
+  getMultiplication(): void {
+    this.service.getMultiplication().subscribe(data => this.multiplication = data);
   }
 
 }
