@@ -1,26 +1,35 @@
 <div class="row">
 	<div class="col-md-12">
-		<h1 class="text-center">Welcome to Social Multiplication</h1>
+		<h1 class="text-center">Welcome Multiplication Microservices</h1>
 	</div>
 </div>
 <div class="row">
 	<div class="col-md-6">
 		<h3 class="text-center">Your new challenge is</h3>
-		<h1 class="text-center">
-			<span class="multiplication-a"></span> x <span
-				class="multiplication-b"></span>
-		</h1>
-		<form id="attempt-form">
-			<div class="form-group">
-				<label for="result-attempt">Result?</label> <input type="text"
-					name="result-attempt" id="result-attempt" class="form-control">
-			</div>
-			<div class="form-group">
-				<label for="user-alias">Your alias:</label> <input type="text"
-					name="user-alias" id="user-alias" class="form-control">
-			</div>
-			<input type="submit" value="Check" class="btn btn-default">
-		</form>
+		<h1 class="text-center">{{multiplication.factorA}} x
+			{{multiplication.factorB}}</h1>
+<!-- 		<form id="attempt-form"> -->
+<!-- 			<div class="form-group"> -->
+<!-- 				<label for="result-attempt">Result?</label> <input type="text" -->
+<!-- 					name="result-attempt" id="result-attempt" class="form-control"> -->
+<!-- 			</div> -->
+<!-- 			<div class="form-group"> -->
+<!-- 				<label for="user-alias">Your alias:</label> <input type="text" -->
+<!-- 					name="user-alias" id="user-alias" class="form-control"> -->
+<!-- 			</div> -->
+<!-- 			<input type="submit" value="Check" class="btn btn-default"> -->
+<!-- 		</form> -->
+<!-- 		<div class="result-message"></div> -->
+		<div class="form-group">
+			<label for="result-attempt">Result ?</label> <input
+				(ngModel)="multiplicationResultAttempt?.resultAttempt"
+				placeholder="result" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="user-alias">Your alias:</label> <input
+				(ngModel)="multiplicationResultAttempt.user.alias"
+				placeholder="alias" class="form-control">
+		</div>
 		<div class="result-message"></div>
 	</div>
 </div>

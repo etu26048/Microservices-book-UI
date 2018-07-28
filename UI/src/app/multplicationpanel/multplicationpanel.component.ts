@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Multiplication} from '../multiplication';
+import {MultiplicationResultAttempt} from '../multiplicationResultAttempt';
 
 @Component({
   selector: 'app-multplicationpanel',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultplicationpanelComponent implements OnInit {
 
-  constructor() { }
+  multiplication: Multiplication = {
+    factorA: 89,
+    factorB: 60
+  };
+
+  multiplicationResultAttempt = new MultiplicationResultAttempt();
+
+  constructor() {}
 
   ngOnInit() {
   }
