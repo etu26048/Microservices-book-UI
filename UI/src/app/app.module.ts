@@ -8,6 +8,8 @@ import {MultplicationpanelComponent} from './Components/multplicationpanel/multp
 import {LeaderboardpanelComponent} from './Components/leaderboardpanel/leaderboardpanel.component';
 import {SelfrankingComponent} from './Components/selfranking/selfranking.component';
 import {HttpClientModule} from '@angular/common/http';
+import {MutliplicationformComponent} from './Components/multplicationpanel/forms/mutliplicationform/mutliplicationform.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     MultplicationpanelComponent,
     LeaderboardpanelComponent,
-    SelfrankingComponent
+    SelfrankingComponent,
+    MutliplicationformComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MultiplicationService],
   bootstrap: [AppComponent]

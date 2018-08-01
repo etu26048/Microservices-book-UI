@@ -3,13 +3,12 @@ import {User} from './user';
 
 export class MultiplicationResultAttempt {
 
-  id: number;
-  multiplication: Multiplication;
-  resultAttempt: number;
-  correct: boolean;
-  user: User;
 
-  constructor() {
+  constructor(
+    private id: number,
+    private multiplication?: Multiplication,
+    private resultAttempt?: number,
+    private correct?: boolean,
+    private user?: User) {}
 
-  }
 }

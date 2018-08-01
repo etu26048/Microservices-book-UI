@@ -13,8 +13,6 @@ export class MultplicationpanelComponent implements OnInit {
 
   multiplication: Multiplication;
 
-  multiplicationResultAttempt = new MultiplicationResultAttempt();
-
   constructor(private service: MultiplicationService) {}
 
   ngOnInit() {
